@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sitio web de la Parroquia de San Pedro de Melipilla.">
+<title>Parroquia de San Pedro de Melipilla</title>
+<style>
+:root{--green:#16764a;--green2:#0d5838;--lime:#d9ef78;--yellow:#ffd45e;--coral:#ff806b;--cream:#fffaf0;--ink:#18352b;--muted:#60746b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{color:inherit;text-decoration:none}.topbar{background:var(--green2);color:#fff;text-align:center;padding:8px 16px;font-size:.88rem}
+header{position:sticky;top:0;z-index:5;background:#fffdf8ee;backdrop-filter:blur(12px);border-bottom:1px solid #e9eddf}
+.nav{max-width:1160px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--green2);line-height:1.15}.brand-mark{width:43px;height:43px;border-radius:15px;background:var(--lime);display:grid;place-items:center;font-size:25px}
+nav{display:flex;gap:19px;align-items:center;flex-wrap:wrap;font-size:.9rem;font-weight:700}nav a:hover{color:var(--green)}
+.hero{background:linear-gradient(115deg,#0d5838f2,#16764adf),radial-gradient(circle at 80% 20%,#d9ef78,transparent 30%);color:#fff;overflow:hidden}
+.hero-inner{max-width:1160px;margin:auto;padding:78px 22px 82px;display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}
+.eyebrow{color:var(--lime);font-weight:800;text-transform:uppercase;letter-spacing:.13em;font-size:.78rem}
+h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.02;margin:14px 0 20px;letter-spacing:-.04em}
+.hero p{max-width:570px;color:#e5f4e9;font-size:1.1rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{display:inline-block;padding:12px 19px;border-radius:999px;font-weight:800;background:var(--yellow);color:#29402f}.btn.alt{background:transparent;border:1px solid #ffffff99;color:#fff}
+.hero-art{min-height:280px;border-radius:34px;background:linear-gradient(145deg,#f9e8b2,#d9ef78);display:grid;place-items:center;color:var(--green2);position:relative;transform:rotate(2deg);box-shadow:0 25px 55px #062d1d55}
+.church{font-size:clamp(6rem,15vw,10rem);filter:drop-shadow(0 9px 0 #b5ce61)}.art-note{position:absolute;bottom:18px;background:#fffdf0;color:var(--green2);padding:8px 15px;border-radius:20px;font-weight:800;transform:rotate(-2deg)}
+section{max-width:1160px;margin:auto;padding:68px 22px}.section-head{max-width:680px;margin-bottom:28px}.kicker{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem}
+h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:8px 0 12px;letter-spacing:-.03em}.lead{color:var(--muted);font-size:1.05rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:#fff;border:1px solid #edf0e5;border-radius:22px;padding:23px;box-shadow:0 8px 25px #25422c0a}.card .emoji{font-size:2rem}.card h3{margin:10px 0 6px}.card p{margin:0;color:var(--muted)}.highlight{background:#eaf4d3}
+.band{background:#eaf4d3;border-radius:30px;padding:34px}.times{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.time{background:#fff;border-radius:18px;padding:20px}.time strong{display:block;color:var(--green2);font-size:1.2rem}.placeholder{font-size:.9rem;color:var(--muted);font-style:italic}
+.news-card{padding:0;overflow:hidden}.news-image{height:145px;display:grid;place-items:center;font-size:3rem;background:linear-gradient(135deg,#ffdf80,#ff9a7e)}.news-card:nth-child(2) .news-image{background:linear-gradient(135deg,#cce99a,#80cba3)}.news-card:nth-child(3) .news-image{background:linear-gradient(135deg,#d9d4ff,#9ec9e8)}.news-copy{padding:20px}
+.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:13px}.photo{min-height:165px;border-radius:22px;display:grid;place-items:center;font-size:2.8rem;background:linear-gradient(135deg,#d9ef78,#f6d47a)}.photo:nth-child(2){background:linear-gradient(135deg,#ffd4c8,#f5a78f)}.photo:nth-child(3){background:linear-gradient(135deg,#c8e9d5,#8fc9a8)}
+.contact{background:var(--green2);color:#fff;border-radius:30px;padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact p{color:#d9eade}.contact .placeholder{color:#d9eade}
+footer{background:#083d29;color:#d9eade;text-align:center;padding:25px 15px;font-size:.9rem}
+@media(max-width:800px){.hero-inner{grid-template-columns:1fr;padding-top:55px}.hero-art{min-height:220px}.grid{grid-template-columns:1fr 1fr}.times{grid-template-columns:1fr}.contact{grid-template-columns:1fr}nav{gap:10px;font-size:.82rem}}
+@media(max-width:560px){.nav{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.photo:first-child{grid-column:span 2}.hero-inner{gap:25px}section{padding:50px 18px}}
+</style>
+</head>
+<body>
+<div class="topbar">Una comunidad de fe, encuentro y servicio 💚</div>
+<header><div class="nav">
+<a class="brand" href="#inicio"><span class="brand-mark">✝</span><span>PARROQUIA<br>DE SAN PEDRO</span></a>
+<nav aria-label="Navegación principal">
+<a href="#horarios">Misas</a><a href="#pastorales">Pastorales</a><a href="#noticias">Noticias</a><a href="#sacramentos">Sacramentos</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a>
+</nav></div></header>
+<main>
+<div class="hero" id="inicio"><div class="hero-inner">
+<div><div class="eyebrow">Parroquia de San Pedro · Melipilla</div><h1>Una iglesia viva, una comunidad que camina unida.</h1>
+<p>Te damos la bienvenida a nuestra casa. Aquí compartimos la fe, celebramos la vida y nos encontramos para servir con alegría.</p>
+<div class="actions"><a class="btn" href="#horarios">Ver horarios de misa</a><a class="btn alt" href="#pastorales">Conoce nuestras pastorales</a></div></div>
+<div class="hero-art" aria-label="Ilustración decorativa de una iglesia"><div class="church">⛪</div><div class="art-note">¡Esta también es tu casa!</div></div>
+</div></div>
+
+<section id="horarios"><div class="section-head"><div class="kicker">Celebremos juntos</div><h2>Horarios de misa</h2><p class="lead">Encuentra aquí los horarios de nuestras celebraciones y acompáñanos.</p></div>
+<div class="band"><div class="times">
+<div class="time"><strong>Domingo</strong><span class="placeholder">Agregar horario de misa</span></div>
+<div class="time"><strong>Durante la semana</strong><span class="placeholder">Agregar días y horarios</span></div>
+<div class="time"><strong>Celebraciones especiales</strong><span class="placeholder">Consultar avisos parroquiales</span></div>
+</div></div></section>
+
+<section id="pastorales"><div class="section-head"><div class="kicker">Caminamos en comunidad</div><h2>Pastorales y movimientos</h2><p class="lead">Distintas formas de vivir la fe, compartir nuestros talentos y ponerlos al servicio de los demás.</p></div>
+<div class="grid">
+<div class="card"><div class="emoji">🌱</div><h3>Infancia Misionera</h3><p>Niños y niñas que conocen a Jesús y comparten su alegría misionera.</p></div>
+<div class="card"><div class="emoji">🕊️</div><h3>Pastoral juvenil</h3><p>Un espacio para crecer en la fe, encontrarse y construir comunidad.</p></div>
+<div class="card"><div class="emoji">📖</div><h3>Catequesis</h3><p>Acompañamiento en el camino de preparación para los sacramentos.</p></div>
+<div class="card"><div class="emoji">🤝</div><h3>Acción solidaria</h3><p>Servicio fraterno y apoyo a quienes más lo necesitan.</p></div>
+<div class="card"><div class="emoji">🙏</div><h3>Liturgia</h3><p>Personas que colaboran en la preparación y celebración de la fe.</p></div>
+<div class="card"><div class="emoji">💚</div><h3>Otros movimientos</h3><p>Pronto podrás conocer aquí todas las comunidades de nuestra parroquia.</p></div>
+</div></section>
+
+<section id="noticias"><div class="section-head"><div class="kicker">La vida parroquial</div><h2>Noticias y actividades</h2><p class="lead">Encuentros, celebraciones y novedades para mantenernos conectados.</p></div>
+<div class="grid">
+<article class="card news-card"><div class="news-image">📅</div><div class="news-copy"><div class="kicker">Próximamente</div><h3>Actividades parroquiales</h3><p>Publicaremos aquí fechas, horarios e información de próximos encuentros.</p></div></article>
+<article class="card news-card"><div class="news-image">🌿</div><div class="news-copy"><div class="kicker">Comunidad</div><h3>Encuentros pastorales</h3><p>Conoce las actividades y reuniones de nuestros grupos y movimientos.</p></div></article>
+<article class="card news-card"><div class="news-image">⛪</div><div class="news-copy"><div class="kicker">Celebraciones</div><h3>Vida litúrgica</h3><p>Información sobre fiestas, solemnidades y celebraciones especiales.</p></div></article>
+</div></section>
+
+<section id="sacramentos"><div class="section-head"><div class="kicker">Signos de nuestra fe</div><h2>Los sacramentos</h2><p class="lead">Te acompañamos en los momentos importantes de tu camino de fe.</p></div>
+<div class="grid">
+<div class="card highlight"><div class="emoji">💧</div><h3>Bautismo</h3><p>Información sobre preparación, fechas y requisitos.</p></div>
+<div class="card"><div class="emoji">🍞</div><h3>Primera Comunión</h3><p>Orientación sobre catequesis y preparación.</p></div>
+<div class="card highlight"><div class="emoji">🔥</div><h3>Confirmación</h3><p>Información sobre el proceso de preparación.</p></div>
+<div class="card"><div class="emoji">💍</div><h3>Matrimonio</h3><p>Requisitos y acompañamiento para parejas.</p></div>
+<div class="card highlight"><div class="emoji">🕯️</div><h3>Unción de los enfermos</h3><p>Cómo solicitar acompañamiento y asistencia pastoral.</p></div>
+<div class="card"><div class="emoji">🕊️</div><h3>Reconciliación</h3><p>Consulta los horarios disponibles para confesiones.</p></div>
+</div></section>
+
+<section id="galeria"><div class="section-head"><div class="kicker">Momentos compartidos</div><h2>Galería de fotografías</h2><p class="lead">La alegría de nuestra comunidad en imágenes. Aquí podremos incorporar fotografías reales de la parroquia.</p></div>
+<div class="gallery"><div class="photo">📸</div><div class="photo">🌻</div><div class="photo">👨‍👩‍👧‍👦</div></div></section>
+
+<section id="contacto"><div class="contact">
+<div><div class="eyebrow">Estamos para encontrarnos</div><h2>Visítanos</h2><p>Será una alegría recibirte en nuestra comunidad parroquial.</p></div>
+<div><h3>Contacto y ubicación</h3><p>📍 <span class="placeholder">Agregar dirección exacta</span></p><p>☎️ <span class="placeholder">Agregar teléfono o correo</span></p><p>📱 <span class="placeholder">Agregar redes sociales</span></p><p class="placeholder">Agregar enlace de ubicación en el mapa.</p></div>
+</div></section>
+</main>
+<footer>Parroquia de San Pedro de Melipilla · Una comunidad que vive y comparte su fe 💚</footer>
+</body></html>
